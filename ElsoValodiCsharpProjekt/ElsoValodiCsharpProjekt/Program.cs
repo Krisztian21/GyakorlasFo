@@ -138,7 +138,38 @@ namespace ElsoValodiCharpProjekt
                 Console.WriteLine("A feladat nem megoldható!");
             }*/
 
-            Console.ReadKey(true);
+            //15.feladat
+            Console.WriteLine("Kérem a számot!");
+            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+            /*for(int i=0; i<=bemenoszam;i++)
+            {
+                if(i==bemenoszam)
+                {
+                    Console.Write($"{i} ");
+                }
+                else
+                {
+                    if (i != 0)
+                    {
+                        Console.Write($"{i} ");
+                    }
+                }
+            }*/
+            //elől tesztelő ciklus
+            //int i = 1;
+            /*while(i<bemenoszam)
+            {
+                Console.Write(i +" ");
+                //i=i+1;
+                //i+=1;
+                //i++;
+            }*/
+            //hátúl tesztelő ciklus
+            /*do
+            {
+                Console.Write(i++ + " ");
+            } while (i < bemenoszam);*/
+            Console.ReadLine();
         }
     }
 }
