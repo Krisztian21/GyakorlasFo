@@ -139,8 +139,8 @@ namespace ElsoValodiCharpProjekt
             }*/
 
             //15.feladat
-            Console.WriteLine("Kérem a számot!");
-            int bemenoszam = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Kérem a számot!");
+            //int bemenoszam = Convert.ToInt32(Console.ReadLine());
             /*for(int i=0; i<=bemenoszam;i++)
             {
                 if(i==bemenoszam)
