@@ -338,7 +338,7 @@ namespace ElsoValodiCharpProjekt
                 szam = Convert.ToInt32(Console.ReadLine());
             }*/
 
-            //21-1.Feladat
+            //21-1.Feladat (lent van egyí hozzá tartozó rész)
             /*Console.WriteLine("Kérek egy számot!");
             int szam = Convert.ToInt32(Console.ReadLine()); ;
             while (szam%2==0)
@@ -371,10 +371,79 @@ namespace ElsoValodiCharpProjekt
             Console.WriteLine(osszeg);*/
 
             //házi képen
+            /*int szam = 0;
+            while(szam<=0)
+            {
+                Console.WriteLine("Kérek egy pozitív egész számot: ");
+                szam = Convert.ToInt32(Console.ReadLine());
+            }
+            if(osszegHettel(szam))
+            {
+                Console.WriteLine($"{szam} osztóinak összege osztható 7-tel. ");
+            }
+            else
+            {
+                Console.WriteLine($"{szam} osztóinak összege nem osztható 7-tel. ");
+            }*/
 
-            Console.ReadLine();
+            //A házinak a feltúrbózása
+            /*Console.WriteLine("1-től 100-ig vizsgálom azokat a számokat amelyek osztóinak összege osztható 7-tel!");
+            for(int i=0; i<101;i++)
+            {
+                if (osszegHettel(i))
+                {
+                    Console.WriteLine($"{i} osztóinak összege osztható 7-tel. ");
+                }
+            }*/
+
+            //21-1.Feladat gyorsabb vált.
+            /*Console.WriteLine("2-től 100-ig a prímszámok: ");
+            for (int i = 2; i < 101; i++)
+            {
+                if(primszame(i))
+                {
+                    Console.WriteLine(i);
+                }
+            }*/
+
+                Console.ReadLine();
         }
-        static bool primszame(int szam)
+        //21-1.Feladat gyorsabb vált.
+        /*static bool primszame(int szam)
+        {
+            bool prime = true;
+            int hatar = (int)Math.Floor(Math.Sqrt(szam)) + 1;
+            for(int i=2; i<hatar; i++)
+            {
+                if(szam%i==0)
+                {
+                    prime = false;
+                    break;
+                }
+            }
+            return prime;
+        }*/
+        //házi
+        /*static bool osszegHettel(int szam)
+        {
+            int osszeg = 0;
+            bool hettel = true;
+            for (int i = 1; i< szam; i++)
+            {
+                if(szam % i==0)
+                {
+                    osszeg += i;
+                }
+            }
+            if(osszeg % 7!=0)
+            {
+                hettel = false;
+            }
+            return hettel;
+
+        }*/
+        //21-1.Feladathoz tart.
+        /*static bool primszame(int szam)
         {
             bool teljesul = true;
 
@@ -393,7 +462,6 @@ namespace ElsoValodiCharpProjekt
             else
             {
                 return !teljesul;
-            }
-        }
+            }*/
     }
 }
