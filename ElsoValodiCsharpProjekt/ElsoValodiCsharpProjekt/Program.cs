@@ -406,7 +406,44 @@ namespace ElsoValodiCharpProjekt
                 }
             }*/
 
-                Console.ReadLine();
+            //34.Feladat
+            /*Console.WriteLine("A párosan speciális számok: ");
+            for(int i = 10; i < 100; i++)
+            {
+                int kulso_tizes = i / 10;
+                int kulso_egyes = i % 10;
+                for (int j = 10; j < 100; j++)
+                {
+                    int beso_tizes = j / 10;
+                    int belso_egyes = j % 10;
+                    int belso_szorzat = i * j;
+                    int kulso = 10 * kulso_egyes + kulso_tizes;
+                    int belso = 10 * belso_egyes + beso_tizes;
+                    int kulso_szorzat = kulso * belso;
+                    if(belso_szorzat==kulso_szorzat)
+                    {
+                        Console.WriteLine($"Az {i} és {j} párosan speciális számok.");
+                    }
+                }
+            }*/
+
+            //35.Feladat
+            //char aBetu = 'a';
+            //Console.WriteLine($"Az {aBetu} ASCIII {(int)aBetu}");
+            /*int sorok = 5;
+            for(int i = 0; i < sorok; i++)
+            {
+                for (int j = 0; j < sorok+1; j++)
+                {
+                    if(97+i+j*sorok<123)
+                    {
+                        Console.SetCursorPosition(j * 10, i);
+                        Console.WriteLine($"{(char)(97 + i + j * sorok)} {97 + i + j * sorok}");
+                    }
+                } 
+                //Console.WriteLine($"{(char)i} {i}");
+            }*/
+            Console.ReadLine();
         }
         //21-1.Feladat gyorsabb vált.
         /*static bool primszame(int szam)
