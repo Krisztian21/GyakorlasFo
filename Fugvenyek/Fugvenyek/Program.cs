@@ -74,7 +74,7 @@ namespace Fugvenyek
                 while (szam >= oszto[i])
                 {
                     ermekSzama[i]++;
-                    sza+m -= oszto[i]; //szam=szam/oszto;
+                    sza+m -= oszto[i]; //szam=szam/oszto;mh
                 }
             }
             return ermekSzama;
