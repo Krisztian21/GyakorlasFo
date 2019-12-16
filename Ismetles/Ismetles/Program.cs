@@ -216,7 +216,7 @@ namespace Ismetles
 
             }*/
 
-            //Kamat
+            //Kamat vb
             int alaposszeg = Convert.ToInt32(Console.ReadLine());
             Console.ReadLine();
         }
