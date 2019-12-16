@@ -32,7 +32,7 @@ namespace SzandiekDogaja
                 Console.SetCursorPosition(32, 5 + i);
                 Console.Write($"{osszeg - alaposszeg:F0}Ft");
                 Console.SetCursorPosition(45, 5 + i);
-                Console.Write($"{osszeg - evesosszeg:F0}Ft");
+                Console.Write($"{osszeg - evesosszeg:F0}Ft");//hoho
             }
 
             Console.ReadKey(true);
