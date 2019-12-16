@@ -15,9 +15,9 @@ namespace KukacTheGame
             //Console.WriteLine($"{szelesseg} {magassag}");
             int x = szelesseg / 2;
             int y = magassag / 2;
-            int[] Xkoord = new int[5];
-            int[] Ykoord = new int[5];
-            for(int i=0; i<5;i++)
+            int[] Xkoord = new int[6];
+            int[] Ykoord = new int[6];
+            for(int i=0; i<6;i++)
             {
                 Xkoord[i] = x + i;
                 Ykoord[i] = y;
@@ -57,7 +57,7 @@ namespace KukacTheGame
         }
         static void Megrajzol(int[] x, int[] y)
         {
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i < 6; i++)
             {
                 Console.SetCursorPosition(x[i], y[i]);
                 Console.Write("@");
@@ -67,49 +67,49 @@ namespace KukacTheGame
         {
             int[] atmenetX = x;
             int[] atmenetY = y;
-            for (int i = 1; i < 4; i++)
+            for (int i = 1; i < 5; i++)
             {
                 x[i] = atmenetX[i + 1];
                 y[i] = atmenetY[i + 1];
             }
-            x[4] = atmenetX[4];
-            y[4] = atmenetY[4] - 1;
+            x[5] = atmenetX[5];
+            y[5] = atmenetY[5] - 1;
         }
         static void Lefele(ref int[] x, ref int[] y)
         {
             int[] atmenetX = x;
             int[] atmenetY = y;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 x[i] = atmenetX[i + 1];
                 y[i] = atmenetY[i + 1];
             }
-            x[4] = atmenetX[4];
-            y[4] = atmenetY[4] + 1;
+            x[5] = atmenetX[5];
+            y[5] = atmenetY[5] + 1;
         }
         static void Jobbfele(ref int[] x, ref int[] y)
         {
             int[] atmenetX = x;
             int[] atmenetY = y;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 x[i] = atmenetX[i + 1];
                 y[i] = atmenetY[i + 1];
             }
-            x[4] = atmenetX[4] + 1;
-            y[4] = atmenetY[4];
+            x[5] = atmenetX[5] + 1;
+            y[5] = atmenetY[5];
         }
         static void Balfele(ref int[] x, ref int[] y)
         {
             int[] atmenetX = x;
             int[] atmenetY = y;
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 x[i] = atmenetX[i + 1];
                 y[i] = atmenetY[i + 1];
             }
-            x[4] = atmenetX[4] - 1;
-            y[4] = atmenetY[4];
+            x[5] = atmenetX[5] - 1;
+            y[5] = atmenetY[5];
             //Vége
         }
     }
