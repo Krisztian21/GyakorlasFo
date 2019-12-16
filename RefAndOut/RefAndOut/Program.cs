@@ -34,7 +34,7 @@ namespace RefAndOut
             {
                 if (osszegHettel(i))
                 {
-                    Console.WriteLine($"{i} osztóinak összege osztható 7-tel. ");
+                    Console.WriteLine($"{i} osztóinak összege osztható 7-tel. ");//hv
                 }
             }
             //21-1.Feladat gyorsabb vált.
