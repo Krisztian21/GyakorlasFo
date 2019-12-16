@@ -26,7 +26,7 @@ namespace LaciFeladata
                 catch (FormatException e)
                 {
                     Console.WriteLine(e.Message);
-                    //throw; //Ez ön magát elintézi azaz nem kell.
+                    //throw; //Ez ön magát elintézi azaz nem kell. már
                 }
             }
 
