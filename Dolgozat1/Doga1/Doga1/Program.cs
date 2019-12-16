@@ -23,7 +23,7 @@ namespace Doga1
                 double terulet = 2 * sugar * Math.PI;
                 Console.Write($"A kör terulete: {terulet}");
             }
-            else if (nev == "téglalap")
+            else if (nev == "téglalap")//h
             {
                 Console.Clear();
                 Console.Write("Adja meg a téglalap a oldalát! ");
