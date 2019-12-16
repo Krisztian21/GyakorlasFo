@@ -10,6 +10,7 @@ namespace KukacTheGame
     {
         static void Main(string[] args)
         {
+            Random rmd = new Random();
             int szelesseg = Console.WindowWidth;
             int magassag = Console.WindowHeight;
             //Console.WriteLine($"{szelesseg} {magassag}");
@@ -17,14 +18,22 @@ namespace KukacTheGame
             int y = magassag / 2;
             int[] Xkoord = new int[6];
             int[] Ykoord = new int[6];
-            for(int i=0; i<6;i++)
+            int[] pontokx = new int[10];
+            int[] pontoky = new int[10];
+            for (int i = 0; i < 6;i++)
             {
                 Xkoord[i] = x + i;
                 Ykoord[i] = y;
                 //Console.SetCursorPosition(Xkoord[i], Ykoord[i]);
                 //Console.Write("@");
             }
+            for (int i = 0; i < 10; i++)
+            {
+                pontokx[i] = rmd.Next(0, szelesseg);
+                pontoky[i] = rmd.Next(0, magassag);
+            }
             Megrajzol(Xkoord, Ykoord);
+            Megrajzol1(pontokx, pontoky);
             ConsoleKeyInfo cki = new ConsoleKeyInfo();
             while(cki.Key!=ConsoleKey.Escape)
             {
@@ -35,6 +44,15 @@ namespace KukacTheGame
                         Console.Clear();
                         Balfele(ref Xkoord, ref Ykoord);
                         Megrajzol(Xkoord, Ykoord);
+                        for(int i=0; i<pontokx.Length; i++)
+                        {
+                            if(pontokx[i]==Xkoord[Xkoord.Length-1]&& pontoky[i] == Ykoord[Ykoord.Length - 1])
+                            {
+                                pontokx = EgyelCsokkent(pontokx[i], pontokx);
+                                pontoky = EgyelCsokkent(pontoky[i], pontoky);
+                            }
+
+                        }
                         break;
                     case ConsoleKey.UpArrow:
                         Felfele(ref Xkoord, ref Ykoord);
@@ -61,6 +79,14 @@ namespace KukacTheGame
             {
                 Console.SetCursorPosition(x[i], y[i]);
                 Console.Write("@");
+            }
+        }
+        static void Megrajzol1(int[] x, int[] y)
+        {
+            for (int i = 1; i < x.Length; i++)
+            {
+                Console.SetCursorPosition(x[i], y[i]);
+                Console.Write("*");
             }
         }
         static void Felfele(ref int[] x, ref int[] y)
@@ -110,7 +136,25 @@ namespace KukacTheGame
             }
             x[5] = atmenetX[5] - 1;
             y[5] = atmenetY[5];
-            //Vége
+          
+        }
+        static void EgyelCsokkent(int szam, int[] a)
+        {
+            int[] b = new int[a.Length - 1];
+
+            for(int i = 0; i < a.Length; i++)
+            {
+                if(szam != a[i])
+                {
+                    b[i] = a[i + 1];
+                    i++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return b;
         }
     }
 }
