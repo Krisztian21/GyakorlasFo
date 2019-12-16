@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5BC842F-2731-4965-88F9-2B3F39232A17}</ProjectGuid>
+    <ProjectGuid>{3F9FCD15-42B0-408C-8628-C280E539EF84}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ismetles</RootNamespace>
-    <AssemblyName>Ismetles</AssemblyName>
+    <RootNamespace>RefAndOut</RootNamespace>
+    <AssemblyName>RefAndOut</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

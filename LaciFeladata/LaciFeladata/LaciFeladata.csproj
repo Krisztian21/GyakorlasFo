@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5BC842F-2731-4965-88F9-2B3F39232A17}</ProjectGuid>
+    <ProjectGuid>{A568B2C3-D421-4FF5-9D47-AA226DE76952}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ismetles</RootNamespace>
-    <AssemblyName>Ismetles</AssemblyName>
+    <RootNamespace>LaciFeladata</RootNamespace>
+    <AssemblyName>LaciFeladata</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
