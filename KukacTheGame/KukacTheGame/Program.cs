@@ -110,6 +110,7 @@ namespace KukacTheGame
             }
             x[4] = atmenetX[4] - 1;
             y[4] = atmenetY[4];
+            //Vége
         }
     }
 }
