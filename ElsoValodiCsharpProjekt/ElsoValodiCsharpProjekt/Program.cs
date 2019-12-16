@@ -392,7 +392,7 @@ namespace ElsoValodiCharpProjekt
             {
                 if (osszegHettel(i))
                 {
-                    Console.WriteLine($"{i} osztóinak összege osztható 7-tel. ");
+                    Console.WriteLine($"{i} osztóinak összege osztható 7-tel. ");hj
                 }
             }*/
 
