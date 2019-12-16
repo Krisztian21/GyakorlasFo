@@ -54,7 +54,7 @@ namespace Szovegkezeles1
             }
             else
             {
-                Console.Write($"Bocsi ilyen indexű karakter nincs: (0-{szo.Length-1})");
+                Console.Write($"Bocsi ilyen indexű karakter nincs: (0-{szo.Length-1})");k
             }*/
 
             //53.Feladat
