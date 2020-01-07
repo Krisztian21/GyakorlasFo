@@ -10,10 +10,10 @@ namespace OsztalyokEgy
     {
         static void Main(string[] args)
         {
-            Ember.Kiirosztaly();
+            //Ember.Kiirosztaly();
             //Console.WriteLine($"Évfolyam {Ember.evfolyam}, osztály: {Ember.osztaly}.");
             //Ember[] emberTomb = new Ember[3];
-            Ember[] emberTomb = new Ember[2];
+            /*Ember[] emberTomb = new Ember[2];
             for (int i=0; i<2; i++)
             {
                 bool letezik = false;
@@ -40,7 +40,7 @@ namespace OsztalyokEgy
                 ember.Kiir(i + 1);
                 /*Console.WriteLine($"Az {i + 1} ember magassága: {emberTomb[i].Magassag} centiméter.");
                 Console.WriteLine($"Az {i + 1} ember test súlya: {emberTomb[i].Testsuly} kilógramm.");
-                Console.WriteLine($"Az {i + 1} ember születési éve: {emberTomb[i].SzuletesiEv}.");*/
+                Console.WriteLine($"Az {i + 1} ember születési éve: {emberTomb[i].SzuletesiEv}.");
                 if (letezik) i--;
 
                 /*Console.WriteLine("Második ember új magassága: ");
@@ -54,16 +54,25 @@ namespace OsztalyokEgy
                     Console.WriteLine(e.Message);
                     letezik = true;
                 }*/
-            }
-            //Ember ember = new Ember(185, 81, "1998.02.15");
-            Console.ReadKey(true);
         }
+            //Ember ember = new Ember(185, 81, "1998.02.15");
+            /*try{
+                   Fiu fiu = new Fiu(176, -65, "2001.01.07", false);
+                Fiu.Kiir(fiu.SzemelyiszamEgyesE);
+            }
+           catch (ArgumentException e)
+                   Console.WriteLine(e.Message);
+            //Fiu fiu = new Fiu(176, 65, "2001.01.07", true);
+            //Fiu.Kiir(fiu.SzemelyiszamEgyesE);*/
+            Console.ReadKey(true);
     }
+   }
+ }
     class Ember
     {
-        private int magassag;
-        private int testsuly;
-        private string szuletesiEv;
+        protected int magassag;
+        protected int testsuly;
+        protected string szuletesiEv;
         static public string osztaly = "Szoftwarefejlesztő";
         static public int evfolyam = 13;
         public int Magassag
@@ -145,6 +154,19 @@ namespace OsztalyokEgy
         static public void Kiirosztaly()
         {
             Console.WriteLine($"Évfolyam {evfolyam}, osztály: {osztaly}.");
+        }
+     public void Kiir(bool ertek)
+    {
+        Console.WriteLine($"Az ember magassága: {this.magassag}");
+        Console.WriteLine($"Az ember test súlya: {this.testsuly}");
+        Console.WriteLine($"Az ember születési éve: {this.szuletesiEv}");
+        if (ertek)
+        {
+            Console.WriteLine($"Az ember fiú!");
+        }
+        else
+        {
+            Console.WriteLine($"Az ember lány!");
         }
     }
 }
