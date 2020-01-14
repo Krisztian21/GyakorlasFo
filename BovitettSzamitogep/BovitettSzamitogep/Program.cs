@@ -12,76 +12,94 @@ namespace BovitettSzamitogep
         {
             try
             {
-
-                Console.WriteLine("Kérem az első számot!");
-                int elso = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Kérem az első számot: ");
+                int elso = Int32.Parse(Console.ReadLine());
                 Szam elsoSzam = new Szam(elso);
-                Console.WriteLine("Kérem az második számot!");
-                int masodik = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Kérem a második számot: ");
+                int masodik = Int32.Parse(Console.ReadLine());
                 Szam masodikSzam = new Szam(masodik);
-                Console.WriteLine("Kérem az harmadik számot!");
-                int harmadik = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Kérem a harmadik számot: ");
+                int harmadik = Int32.Parse(Console.ReadLine());
                 Szam harmadikSzam = new Szam(harmadik);
 
-                elsoSzam.ElsoKertSzamOsszege(masodikSzam);
-                elsoSzam.ElsoKertSzamKivonasa(masodikSzam);
-                elsoSzam.ElsoKertSzamSzorzata(masodikSzam);
-                elsoSzam.ElsoKertSzamOsztaleka(masodikSzam);
+                elsoSzam.ElsoKetSzamOsszege(masodikSzam);
+                elsoSzam.ElsoKetSzamKulonbsege(masodikSzam);
+                elsoSzam.ElsoKetSzamSzorzata(masodikSzam);
+                elsoSzam.ElsoKetSzamHanyadosa(masodikSzam);
+                elsoSzam.ElsoKetSzamMertaniKozepe(masodikSzam);
                 elsoSzam.SzamokSzamtaniKozepe(masodikSzam, harmadikSzam);
                 elsoSzam.SzamokMertaniKozepe(masodikSzam, harmadikSzam);
-                elsoSzam.SzamokMertaniKozepe2(masodikSzam, harmadikSzam);
-
 
             }
             catch (Exception e)
             {
-                throw;
+
             }
-            Console.ReadLine();
+
+            Console.ReadKey(true);
         }
     }
+
     class Szam
     {
+        // Ez itt a property-be "ágyazott" private mezőérték.
         public int BekertErtek { get; set; }
+
+        // Egyargumentumos konstruktor.
         public Szam(int bekert)
         {
             this.BekertErtek = bekert;
         }
-        public void ElsoKertSzamOsszege(Szam szam)
+
+        public void ElsoKetSzamOsszege(Szam szam)
         {
-            Console.WriteLine($"Az első két szám összege: {this.BekertErtek+szam.BekertErtek}.");
+            Console.WriteLine($"Az első két szám összege: {this.BekertErtek + szam.BekertErtek}");
         }
-        public void ElsoKertSzamKivonasa(Szam szam)
+
+        public void ElsoKetSzamKulonbsege(Szam szam)
         {
-            Console.WriteLine($"Az első két szám maradéka: {this.BekertErtek - szam.BekertErtek}.");
+            Console.WriteLine($"Az első két szám különbsége: {this.BekertErtek - szam.BekertErtek}");
         }
-        public void ElsoKertSzamSzorzata(Szam szam)
+
+        public void ElsoKetSzamSzorzata(Szam szam)
         {
-            Console.WriteLine($"Az első két szám szorzata: {this.BekertErtek * szam.BekertErtek}.");
+            Console.WriteLine($"Az első két szám szorzata: {this.BekertErtek * szam.BekertErtek}");
         }
-        public void ElsoKertSzamOsztaleka(Szam szam)
+
+        public void ElsoKetSzamHanyadosa(Szam szam)
         {
-            if (BekertErtek >= 0 && this.BekertErtek >= 0)
+            if (szam.BekertErtek != 0)
             {
-                Console.WriteLine($"Az első két szám osztaléka: {Math.Sqrt(this.BekertErtek / szam.BekertErtek)}.");
+                Console.WriteLine($"Az első két szám hányadosa: {(double)this.BekertErtek / szam.BekertErtek:F3}");
             }
             else
             {
-                Console.WriteLine("A számhalmaz véges.");
+                Console.WriteLine($"Az első két szám hányadosa nem véges érték.");
             }
         }
-        public void SzamokSzamtaniKozepe(Szam szam, Szam masikszam)
+
+        public void ElsoKetSzamMertaniKozepe(Szam szam)
         {
-            Console.WriteLine($"Az első két szám számtani közepe: {((double)this.BekertErtek + szam.BekertErtek + masikszam.BekertErtek) / 3:F3}.");
+            if (szam.BekertErtek >= 0 && this.BekertErtek >= 0)
+            {
+                Console.WriteLine($"Az első két szám mértani közepe: {Math.Sqrt(this.BekertErtek * szam.BekertErtek):F3}");
+            }
+            else
+            {
+                Console.WriteLine($"Az első két számból legalább az egyik negatív érték.");
+            }
         }
-        public void SzamokMertaniKozepe(Szam szam, Szam masikszam)
+
+        public void SzamokSzamtaniKozepe(Szam szam, Szam masikSzam)
         {
-            Console.WriteLine($"Az első két szám mértani közepe: {Math.Pow((this.BekertErtek * szam.BekertErtek * masikszam.BekertErtek), (double)1 / 3):F6}.");
+            Console.WriteLine($"A számok számtani közepe: {((double)this.BekertErtek + szam.BekertErtek + masikSzam.BekertErtek) / 3:F3}");
         }
-        public void SzamokMertaniKozepe2(Szam szam, Szam masikszam)
+
+        public void SzamokMertaniKozepe(Szam szam, Szam masikSzam)
         {
-            double mertank=Math.Exp(this.BekertErtek * szam.BekertErtek * masikszam.BekertErtek / 3);
-            Console.WriteLine($"Az első két szám mértani közepe: {BekertErtek:F6}.");
+            double ertek = Math.Exp(Math.Log(this.BekertErtek * szam.BekertErtek * masikSzam.BekertErtek) / 3);
+            Console.WriteLine($"A számok számtani közepe (első): {Math.Pow((this.BekertErtek * szam.BekertErtek * masikSzam.BekertErtek), (double)1 / 3):F6}");
+            Console.WriteLine($"A számok számtani közepe (második): {ertek:F6}");
         }
     }
- }
+}
